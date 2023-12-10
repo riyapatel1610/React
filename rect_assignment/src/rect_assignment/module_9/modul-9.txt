@@ -1,0 +1,56 @@
+//1. what is Reactjs?
+ans=
+React is a js library which help us to create single page web application by using components.
+
+
+//2.• What is NPM in React Js? 
+ans=
+npm: node package maneger
+
+
+//3• What is Role of Node Js in react Js?
+ans=
+Node is the most popular platform for hosting and running web servers for React apps. After all, using NPM (Node Package Manager), you can install any package with NPM command-line interface CLI. Moreover, Node utilizes Webpack and other modules to turn a React application into an easily compilable single file.
+
+//4• What is CLI command In React Js?
+ans=
+js and React. The CLI will be used to create a Node. js microservice project. It will be similar to how the create-react-app works in that you can run it using npx or just install it as a global package.
+
+//5.• What is Components in React Js?
+
+ans=
+peace of small html code
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components. 
+
+//6.• What is Header and Content Components in React Js?
+ans= 
+Headers are compositions that extend standard navbar functionalities. They contain additional components like a jumbotron, sub-navbar, or image covers which serve as a containers for extra navigation elements - usually links, forms, or call-to-action buttons.
+
+//7• How to install React Js on Windows, Linux Operating System? How to Install
+NPM and How to check version of NPM?
+ans=
+    Step 1: Install npm. Login to your server as a sudo user and run the following                                      
+     command: sudo apt install npm
+
+   Step 2: Install create-react-app Utility. create-react-app is a utility that allows you                   
+   to set up all the tools required for a React application. ...
+
+   Step 3: Create and Launch Your First React Application.
+
+    To see the most current version of a package in the npm repository, use the npm view npm get version of package-name version command.
+
+//8.• How to check version of React Js?
+ans=
+1)	npx create-react-app name_of_the_app
+2)	npm view react version
+3)	import React from 'react';
+     let a = React.version.
+
+//9• How to change in components of React Js?
+ans=
+To update the state of a class based component we will be using the given setState method. Class based component can directly access the states using this keyword.
+
+
+
+
+

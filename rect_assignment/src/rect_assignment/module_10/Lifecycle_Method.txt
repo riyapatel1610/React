@@ -1,0 +1,16 @@
+constructor(props)
+    The constructor method is called when a component is initialized, and it's the right place to set up the initial state and bind event handlers.
+    Example use: Initializing the component's state. render()
+Render()
+    The render method is required for every component and is responsible for returning the JSX (UI representation) of the component.
+    Example use: Rendering the component's UI. componentDidMount()
+ componentDidMount()
+    The componentDidMount method is called after the component has been rendered to the screen.
+    Example use: Fetching data from APIs, subscribing to events, or setting up timers.
+componentDidUpdate(prevProps, prevState)
+    The componentDidUpdate method is called after the component updates and re-renders.
+    Example use: Performing side effects after a state change or receiving new props.
+componentWillUnmount()
+    The componentWillUnmount method is called just before the component is removed from the DOM.
+    Example use: Cleaning up resources like event listeners, timers, or subscriptions.
+    It's essential to mention that React encourages using functional components with hooks instead of relying on class-based components and lifecycle methods. Hooks provide a more straightforward and composable way to manage state and side effects in functional components
