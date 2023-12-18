@@ -7,6 +7,7 @@ import SingleInput from './singleinput'
 import SinputPratices from './SinputPratices'
 import MultipleInput from "./MultipleInput";
 import MulIn from "./MulIn";
+import CrudPratices from "./CrudPratices";
 
 function App() {
  
@@ -16,9 +17,9 @@ function App() {
       {/* <SingleInput /> */}
       {/* <SinputPratices /> */}
       {/* <MultipleInput /> */}
-      <MulIn />
-      <MultipleInput/>
-      
+      {/* <MulIn /> */}
+      {/* <MultipleInput/> */}
+      < CrudPratices />
       </div>
       <ToastContainer />
     </>
