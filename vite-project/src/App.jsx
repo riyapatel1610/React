@@ -3,6 +3,17 @@ import { useState } from 'react'
 import './App.css'
 import SingleInput from "./8_input/SingleInput";
 import MultipleInput from "./8_input/multiple_input/multipleinput";
+import UseStatePro from "./Hook/UseStatePro";
+import UseRefPro from "./Hook/useRefPro";
+import UseStatepratices from "./Hook/UseStatepratices";
+import USeRefPratices from "./Hook/USeRefPratices";
+import Routerr from "./9_ProtectRouter/Task/Routerrr"
+import "./App.css";
+import Register from "./9_ProtectRouter/User_register/Register"
+import Mainpage from "./9_ProtectRouter/User_register/Mainpage"
+
+
+
 
 
 
@@ -49,13 +60,22 @@ function App() {
         {/*-----------------------HOOK--------------------------  */}
         {/* <UseEfectCom /> */}
         {/* <UseEfreectProject /> */}
+        {/* <UseStatePro /> */}
+       {/* <UseRefPro /> */}
+       {/* <UseStatepratices /> */}
+       {/* < USeRefPratices /> */}
+       
 
         {/*-----------------------INPUT--------------------------  */}
          {/* <SingleInput />  */}
       
-        <MultipleInput />
+        {/* <MultipleInput /> */}
+        {/*-----------------------Router--------------------------  */}  
+        {/* <Router /> */}
+        {/* <Mainpage /> */}
       </div>
       <ToastContainer />
+      
     </>
   );
 }
