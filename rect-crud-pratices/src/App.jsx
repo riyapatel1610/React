@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import crud_pratices from './crud_pratices'
+import Review from './Review'
 function App() {
  
   return (
     <>
     <div className="appContainer">
-     <crud_pratices />
-      
+     {/* <crud_pratices /> */}
+      < Review/>
       </div>
       
     </>

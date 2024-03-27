@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+// import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 export default function crud_pratices() {
   let [user, setUser] = useState({
     email: "",

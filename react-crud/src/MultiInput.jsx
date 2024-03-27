@@ -17,8 +17,6 @@ export default function MultiInput() {
 
     }
     
-    
-    
   return (
     <div>
       <Form className="border border-dark p-3 rounded-3">

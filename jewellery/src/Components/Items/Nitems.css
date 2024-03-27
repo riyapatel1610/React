@@ -1,0 +1,43 @@
+.Nitem{
+    width:250px;
+    
+}
+.Nitem img{
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    border: 2px solid beige;
+}
+.Nitem p{
+    margin: 6px 0px;
+    color: #a8741a;
+    font-weight: 500;
+   
+}
+
+.Nitem-price{
+    display: flex;
+    gap: 20px;
+    color: #a8741a;
+}
+.Nitem-price-new{
+    color:#a8741a;
+    font-size: 20px;
+    font-weight: 600px;
+}
+
+.Nitem:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+.Nitem-price-neww{
+    color: #a8741a;
+   
+    font-size: 20px;
+    font-weight: 600px;
+}
+.Nitem-price-old{
+    color:#a8741a;
+    font-size: 20px;
+    font-weight: 600px;
+}
