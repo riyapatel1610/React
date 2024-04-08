@@ -11,12 +11,11 @@ export default function Router() {
     return (
         <>
             <BrowserRouter>
-                <Header />
+                <Navbar/>
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/about' element={<ProtectedRouter Component={<About />} />} />
-                    <Route path='/service' element={<Service />} />
-                   
+                    {/* <Route path='/h' element={<Home />} /> */}
                 </Routes>
                 
             </BrowserRouter>

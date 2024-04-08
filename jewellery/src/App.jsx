@@ -3,9 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Router from './Routes/Rou'
-import Rou from './Routes/Rou'
+
+import Router from './Routes/Router'
+
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     {/* <Navbar /> */}
-    <Rou/>
+    <Router/>
     </>
   )
 }
