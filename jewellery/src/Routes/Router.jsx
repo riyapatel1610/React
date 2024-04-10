@@ -36,7 +36,7 @@ export default function Router() {
                         <Route path="/protectedRoute" element={<ProtectedRoute profile={<Profile />} />} />
                         <Route path="/product" element={<Product />} />
                         <Route path="/dashBoard" element={<DarshBoard />} />
-                        <Route path="/cart" element={<Cart />} />
+                        {/* <Route path="/cart" element={<Cart />} /> */}
 
 
                     </Routes>
