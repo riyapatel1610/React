@@ -18,14 +18,15 @@
 }
 .slick-prev{
     top:-60px;
-    left:1382px;
+    left:1126px;
 }
 .slick-prev:hover{
    color: red !important;
+
 }
 
 .slick-next{
-    right: 26px;
+    right: 47px;
     top:-60px
 }
 @media only screen and (max-width:600px) {

@@ -4,61 +4,97 @@ import i2_img from "../../../../assets/Images/bag2.webp"
 import i3_img from "../../../../assets/Images/bag3.webp"
 import i4_img from "../../../../assets/Images/bag4.webp"
 import i5_img from "../../../../assets/Images/bag5.webp"
+import i6_img from "../../../../assets/Images/bag6.webp"
+import i7_img from "../../../../assets/Images/bag7.webp"
+import i8_img from "../../../../assets/Images/bag8.webp"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const data = [{
-  "id": 1,
-  "title": "Armor Dust / Rain Cover for Backpack",
-  "category": "Bag",
-  "price": 499.00,
-  "image": i1_img,
-  "old_price": 600,
-  "rating": 4,
-  "discount": "30%"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faHeart } from '@fortawesome/free-regular-svg-icons'
+const data = [
+  {
+    id: 1,
+    title: "Fitpack ",
+    category: "Bag",
+    price: 499.0,
+    image: i1_img,
+    old_price: 600,
+    rating: 4,
+    discount: "30%",
+  },
+  {
+    id: 2,
+    title: "Amigo Backpack",
+    category: "Bag",
+    price: 1899.0,
+    image: i2_img,
+    old_price: 3233.0,
+    rating: 5,
+    discount: "14%",
+  },
+  {
+    id: 3,
+    title: "Fitpack Neo",
+    category: "Bag",
+    price: 1899.0,
+    image: i3_img,
+    old_price: 2899.0,
+    rating: 4,
+    discount: "10%",
+  },
+  {
+    id: 4,
+    title: "Caprio",
+    category: "Bag",
+    price: 999.0,
+    image: i4_img,
+    old_price: 1850.0,
+    rating: 4,
+    discount: "35%",
+  },
+  {
+    id: 5,
+    title: "Neo Armor Dust / Rain Cover for Backpack",
+    category: "Bag",
+    price: 1599.0,
+    image: i5_img,
+    old_price: 2399.0,
+    rating: 5,
+    discount: "20%",
+  },
+  {
+    id: 6,
+    title: "Accelerator",
+    category: "Bag",
+    price: 1599.0,
+    image: i6_img,
+    old_price: 2399.0,
+    rating: 5,
+    discount: "20%",
+  },
+  {
+    id: 7,
+    title: "Amigo Backpack",
+    category: "Bag",
+    price: 1599.0,
+    image: i7_img,
+    old_price: 2399.0,
+    rating: 5,
+    discount: "20%",
+  },
+  {
+    id: 8,
+    title: "Accelerator",
+    category: "Bag",
+    price: 1599.0,
+    image: i8_img,
+    old_price: 2399.0,
+    rating: 5,
+    discount: "20%",
+  },
+];
 
-},
-{
-  "id": 2,
-  "title": "Amigo Backpack",
-  "category": "Bag",
-  "price": 1899.00,
-  "image": i2_img,
-  "old_price": 3233.00,
-  "rating": 5,
-  "discount": "14%"
-},
-{
-  "id": 4,
-  "title": "Fitpack Neo",
-  "category": "Bag",
-  "price": 1899.00,
-  "image": i3_img,
-  "old_price": 2899.00,
-  "rating": 4,
-  "discount": "10%"
-},
-{
-  "id": 4,
-  "title": "Caprio",
-  "category": "Bag",
-  "price": 999.00,
-  "image": i4_img,
-  "old_price": 1850.00,
-  "rating": 4,
-  "discount": "35%"
-},
-{
-  "id": 5,
-  "title": "Accelerator",
-  "category": "Bag",
-  "price": 1599.00,
-  "image": i5_img,
-  "old_price": 2399.00,
-  "rating": 5,
-  "discount": "20%"
-}
-]
 export default function OurCollection() {
   var settings = {
     dots: false,
@@ -74,74 +110,87 @@ export default function OurCollection() {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className=' flex flex-col justify-center items-center px-4 lg:px-20 lg:py-20 gap-6'>
-      <div className='w-full h-fit'>
-        <Slider {...settings}>
-          {
-            data.map((item, index) => (
-              <div id='slider-boxes' key={index} className='bg-white  flex flex-col justify-center items-center '>
+    <div className="container">
+     
+      <div className=" flex flex-col justify-center items-center px-4 lg:px-20 lg:py-20 gap-6">
+        <div className="w-full h-fit">
+        <div className='container mt-[-33px]'>
+        <h3>Our collection</h3>
+      </div>
+          <Slider {...settings}>
+            {data.map((item, index) => (
+              <div
+                id="slider-boxes"
+                key={index}
+                className="group  flex flex-col justify-center items-center "
+              >
                 {/* image box css */}
-                <div id='image-box' className='overflow-hidden relative group'>
+                <div
+                  id="image-box"
+                  className="group-hover:h-80 overflow-hidden relative group "
+                >
                   {
-
-                    <img src={item.image} alt={item.title} className='w-full h-fit object-cover' />
-
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-fit object-cover"
+                    />
                   }
-                  {/* <div className='absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-[5.5rem] group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300'>
+                  <p className="bg-red-500 absolute p-1 !rounded-md top-1 left-1 text-white m-[10px]">
+                    Sale {item.discount}
+                  </p>
+                  <div className="hidden group-hover:block absolute top-0 m-0 right-0">
+                    <div className="bg-white hover:!bg-red-500 hover:text-white  border h-12 w-12 text-center rounded-full grid place-content-center">
+                      <FontAwesomeIcon icon={faEye} />
+                    </div>
 
-            </div> */}
-                  <div className='flex gap-1 mt-1 absolute -bottom-[-395px]  left-6...'>
-                    <h7 className='bg-red-600 px-1.5 py-0.5 rounded-md text-xs text-white'>sale{item.discount}</h7>
+                    <div className="bg-white hover:!bg-red-500 hover:text-white  border h-12 w-12 text-center rounded-full grid place-content-center">
+                      <FontAwesomeIcon icon={faHeart} />
+                    </div>
                   </div>
                 </div>
-                <div className='text-black m-0'>
+                <div className="flex flex-col items-center">
                   <h7>{item.rating}</h7>
-                </div>
-                <div className='overflow-hidden m-0'>
-                  <h6 className='text-black'>{item.title}</h6>
-                </div>
-                <div class="flex items-center m-0">
-                <div className=''>
-                  <h6 className='text-black '>Rs.{item.price}</h6>
-                </div>
-                <div className=''>
-                  <h6 className='text-black text-sm line-through opacity-50'>{item.old_price}</h6>
-                </div>
-
+                  <h6 className="text-black">{item.title}</h6>
+                  <div class="flex items-center ">
+                    <h6 className="text-black">Rs.{item.price}</h6>
+                    <div className='flex items-center gap-1'>
+                      <h6 className="text-black text-sm line-through opacity-50">
+                        {item.old_price}
+                      </h6>
+                    </div>
+                  </div>
+                  <button className="bg-[#d11e33] text-white rounded-md py-2 px-5 hidden group-hover:block">
+                    Add to Cart
+                  </button>
                 </div>
               </div>
-
-            ))
-
-          }
-        </Slider>
-
-
+            ))}
+          </Slider>
+        </div>
       </div>
-
-
     </div>
-  )
+  );
 }

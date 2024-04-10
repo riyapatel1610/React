@@ -3,6 +3,7 @@ import bgImage from "../../../../assets/Images/bg.webp";
 import fiptpack from "../../../../assets/Images/Fitpack.webp"
 import rumble from "../../../../assets/Images/Rumble.webp";
 import OurCollection from "./OurCollection"
+import Popular from "./Popular"
 import Fotter from '../../../Component/Footer/Footer';
 import { GiRecycle } from "react-icons/gi";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -15,7 +16,7 @@ export default function Home() {
             <button className=' mb-3 px-[40px] absolute bottom-0 py-[10px] bg-red-700 rounded-3xl text-white hover:!text-red-700 hover:bg-white'>Shop Now</button>
         </div>
         {/* ------fippack section-------- */}
-        <div className='flex container gap-4 py-5'>
+        <div className='flex  justify-center container gap-4 py-5'>
                 <div className='overflow-hidden'> 
                 <img src={fiptpack} alt="" className='hover:scale-110 transition-all duration-700' />
                 </div>
@@ -25,10 +26,11 @@ export default function Home() {
             </div>
             {/* --------------our collection-------- */}
             <OurCollection />
-
+            {/* ----------------popular section------------ */}
+            <Popular />
 
             {/* ----------------Cash on delivery---------------  */}
-           <div className='bg-[#d11e33] text-white p-[50px]'>
+           <div className='bg-[#d11e33] text-white p-[80px]'>
         
         <div className='flex justify-around text-center [&>*]:cursor-pointer '>
             <div className='group/item justify-center text-xl'><span className='group-hover/item:text-black text-6xl'> <GiRecycle /></span> <br />
