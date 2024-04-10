@@ -12,10 +12,18 @@
     color: #777777;
     font-size: 35px;
 }
+.slick-arrow:hover{
+    color: #f02424  !important;
+    
+}
 .slick-prev{
     top:-60px;
-    left:1170px;
+    left:1382px;
 }
+.slick-prev:hover{
+   color: red !important;
+}
+
 .slick-next{
     right: 26px;
     top:-60px
