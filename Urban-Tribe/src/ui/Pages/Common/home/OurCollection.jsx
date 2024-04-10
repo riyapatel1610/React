@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faEye, faHeart, faStar } from '@fortawesome/free-regular-svg-icons'
 const data = [
   {
     id: 1,
@@ -30,7 +30,7 @@ const data = [
     price: 1899.0,
     image: i2_img,
     old_price: 3233.0,
-    rating: 5,
+    rating: 3,
     discount: "14%",
   },
   {
@@ -40,7 +40,7 @@ const data = [
     price: 1899.0,
     image: i3_img,
     old_price: 2899.0,
-    rating: 4,
+    rating: 3,
     discount: "10%",
   },
   {
@@ -60,7 +60,7 @@ const data = [
     price: 1599.0,
     image: i5_img,
     old_price: 2399.0,
-    rating: 5,
+    rating: 4,
     discount: "20%",
   },
   {
@@ -80,7 +80,7 @@ const data = [
     price: 1599.0,
     image: i7_img,
     old_price: 2399.0,
-    rating: 5,
+    rating: 2,
     discount: "20%",
   },
   {
@@ -90,7 +90,7 @@ const data = [
     price: 1599.0,
     image: i8_img,
     old_price: 2399.0,
-    rating: 5,
+    rating: 4,
     discount: "20%",
   },
 ];
@@ -129,6 +129,17 @@ export default function OurCollection() {
         },
       },
     ],
+  };
+  const renderRatingStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(<FontAwesomeIcon key={i} icon={faStar} className="text-yellow-400" />);
+      } else {
+        stars.push(<FontAwesomeIcon key={i} icon={faStar} className="text-gray-300" />);
+      }
+    }
+    return stars;
   };
 
   return (
@@ -171,8 +182,12 @@ export default function OurCollection() {
                     </div>
                   </div>
                 </div>
+                <div className='flex items-center'>
+                    {renderRatingStars(item.rating)}
+                </div>
                 <div className="flex flex-col items-center">
-                  <h7>{item.rating}</h7>
+                    {/* {renderRatingStars(item.rating)}
+                  <h7>{item.rating}</h7> */}
                   <h6 className="text-black">{item.title}</h6>
                   <div class="flex items-center ">
                     <h6 className="text-black">Rs.{item.price}</h6>

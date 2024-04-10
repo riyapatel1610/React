@@ -35,8 +35,8 @@ export default function Header() {
                         menuItem?.map((menuItem, index) => {
                             return (
                                 <>
-                                    <li key={index}>
-                                        <NavLink className="text-decoration-none text-black nav text-sm ">{menuItem?.label}</NavLink>
+                                   <li key={index}>
+                                        <NavLink className="text-decoration-none text-black hover:!text-red-600">{menuItem?.label}</NavLink>
                                     </li>
                                 </>
                             )
@@ -53,8 +53,8 @@ export default function Header() {
                     <img src={logo} alt="" className='h-16' />
                 </div>
                 <div className='flex gap-6 items-center'>
-                    <div>
-                        <NavLink className="text-decoration-none text-red-500 hover:text-black"> Sign </NavLink>
+                <div>
+                        <NavLink to={"/login"} className="text-decoration-none text-red-500 hover:text-black"> Sign In</NavLink>
                         <span className='text-gray-400'>or</span>
                         <NavLink className="text-decoration-none text-red-500 hover:text-black"> Register </NavLink>
                     </div>

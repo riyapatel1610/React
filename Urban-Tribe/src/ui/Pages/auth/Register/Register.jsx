@@ -1,11 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Button, Form, FormGroup, Input, Label } from "reactstrap";
-
 
 export default function RegisterPage() {
-  let [RegisterData, setRegisterData] = useState({
+  const [registerData, setRegisterData] = useState({
     name: "",
     email: "",
     number: "",
@@ -13,94 +10,134 @@ export default function RegisterPage() {
     age: "",
     address: [],
   });
-  let [add, setAdd] = useState({
+
+  const [add, setAdd] = useState({
     add: "",
     city: "",
     state: "",
     pinCode: "",
   });
-  let [data, setData] = useState([]);
 
-  const SubmitHandler = (e) => {
+  const [data, setData] = useState([]);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data)
-    const Details = { ...RegisterData, address: [add] };
-    setData([Details]);
+    const details = { ...registerData, address: [add] };
+    setData([details]);
   };
+
   return (
-    <>  
-      <Form className="w-50  m-auto mt-4 mb-5 px-4 py-5 rounded-2  " style={{ boxShadow: "0px 0px 3px" }}>
-        <h2 className="text-center"> Register Here</h2>
-        <FormGroup>
-          <Label for="">Name</Label>
-          <Input
+    <>
+      <h2 className="text-center"> CREATE AN ACCOUNT</h2>
+      <form className="w-1/2 m-auto mt-4 mb-5 px-4 py-5 rounded-lg shadow-md">
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            Name
+          </label>
+          <input
             type="text"
-            onChange={(e) => setRegisterData({ ...RegisterData, name: e.target.value })}
+            id="name"
+            onChange={(e) => setRegisterData({ ...registerData, name: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleEmail">Email</Label>
-          <Input
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            Email
+          </label>
+          <input
             type="email"
-            onChange={(e) => setRegisterData({ ...RegisterData, email: e.target.value })}
+            id="email"
+            onChange={(e) => setRegisterData({ ...registerData, email: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleNumber">Number</Label>
-          <Input
+          
+          <label htmlFor="number" className="block text-sm font-medium text-gray-700">
+            Number
+          </label>
+          <input
             type="number"
-            onChange={(e) => setRegisterData({ ...RegisterData, number: e.target.value })}
+            id="number"
+            onChange={(e) => setRegisterData({ ...registerData, number: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="examplePassword">Password</Label>
-          <Input
-            type="Password"
-            onChange={(e) =>
-              setRegisterData({ ...RegisterData, password: e.target.value })
-            }
+
+
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            onChange={(e) => setRegisterData({ ...registerData, password: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleAge">age</Label>
-          <Input
-            type="number"
-            onChange={(e) => setRegisterData({ ...RegisterData, age: e.target.value })}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleAress">Adress</Label>
-          <Input
+
+
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            Age
+          </label>
+          <input
             type="text"
+            id="text"
+            onChange={(e) => setRegisterData({ ...registerData, age: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
+          />
+
+
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            Address
+          </label>
+          <input
+            type="text"
+            id="address"
             onChange={(e) => setAdd({ ...add, add: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleCity">City</Label>
-          <Input
+
+
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+           City
+          </label>
+          <input
             type="text"
+            id="city"
             onChange={(e) => setAdd({ ...add, city: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleState">state</Label>
-          <Input
+
+
+
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          state
+          </label>
+          <input
             type="text"
-            onChange={(e) => setAdd({ ...add ,state: e.target.value })}
+            id="state"
+            onChange={(e) => setAdd({ ...add, state: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="examplePincode">Pincode</Label>
-          <Input
+
+
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          Pincode
+          </label>
+          <input
             type="number"
+            id="Pincode"
             onChange={(e) => setAdd({ ...add, pinCode: e.target.value })}
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500"
           />
-        </FormGroup>
-        <Button className="w-100 bg-danger" onClick={(e) => SubmitHandler(e)}>
+
+
+        </div>
+      
+        <button
+          type="submit"
+          className="w-full bg-red-600 py-2 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+          onClick={handleSubmit}
+        >
           Submit
-        </Button>
-       
-      </Form>
+        </button>
+      </form>
     </>
   );
 }
