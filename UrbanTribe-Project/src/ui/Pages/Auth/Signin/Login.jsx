@@ -29,7 +29,8 @@ export default function Login() {
         toast.success("User login success");
 
         if (res?.data?.data?.userType === "admin") {
-          navigate("/admin-user");
+          window.scrollTo(0, 0);
+          navigate("/")
         } else {
           navigate("/");
         }

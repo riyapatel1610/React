@@ -14,8 +14,8 @@ import Register from "../ui/Pages/Auth/Register/Register";
 import Product from "../ui/Pages/Admin/Product/Product";
 import User from "../ui/Pages/Admin/User/User";
 import Order from "../ui/Pages/Admin/Order/Order";
-import store from '../redux/app/store'
-import Account from "../ui/Pages/Admin/Account/account";
+import store from '../redux/app/store';
+import Account from "../ui/Pages/Common/Account/Account";
 
 export default function Router() {
   return (

@@ -73,6 +73,7 @@ const data =useSelector(state => state.authSlice);
         <div className="cursor-pointer" onClick={() => navigate("/")}>
           <img src={logo} alt="" className="h-16" />
         </div>
+        {data?.user?.userType === "admin" && (
         <ul className="flex [&_*]:mx-3">
           <li>
             <NavLink to={"/admin-product"}>Product</NavLink>
@@ -84,6 +85,7 @@ const data =useSelector(state => state.authSlice);
             <NavLink to={"/admin-order"}>Order</NavLink>
           </li>
         </ul>
+         )}
         <div className=" flex gap-6 items-center">
           {data?.token ? (
             <div>
