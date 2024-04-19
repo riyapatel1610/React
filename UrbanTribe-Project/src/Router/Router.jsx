@@ -16,6 +16,7 @@ import User from "../ui/Pages/Admin/User/User";
 import Order from "../ui/Pages/Admin/Order/Order";
 import store from '../redux/app/store';
 import Account from "../ui/Pages/Common/Account/Account";
+import Allproduct from "../ui/Pages/UserSide/AllProduct/Allproduct"
 
 export default function Router() {
   return (
@@ -28,12 +29,14 @@ export default function Router() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/all-products" element ={<Allproduct/>}/>
               <Route path="/addtocart" element={<AddToCart />} />
 
               {/* --------ADMIN--------- */}
               <Route path="/admin-product" element={<Product />} />
               <Route path="/admin-user" element={<User />} />
               <Route path="/admin-order" element={<Order />} />
+              {/* ------------------common-------------- */}
               <Route path="/account" element={<Account />} />
             </Routes>
             <Footer />

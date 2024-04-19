@@ -12,7 +12,7 @@ import logo from "../../../assets/Images/logo.avif"
 import { useSelector } from "react-redux";
 const menuItem = [
   { label: "Track Order" },
-  { label: "All Products" },
+  { label: "All Products" , path: "/all-products"},
   { label: "Casual Backpacks" },
   { label: "Professional" },
   { label: "Travel" },
@@ -46,9 +46,15 @@ const data =useSelector(state => state.authSlice);
                 return (
                   <>
                     <li key={index}>
-                      <NavLink className="text-decoration-none text-black hover:!text-red-600">
+                    {menuItem.path ? ( // Check if menuItem has path  
+                      <NavLink className="text-decoration-none text-black hover:!text-red-600"  to={menuItem.path}>
                         {menuItem?.label}
                       </NavLink>
+                      ) : (
+                        <span className="text-decoration-none text-black hover:!text-red-600">
+                        {menuItem.label}
+                      </span> 
+                       )}
                     </li>
                   </>
                 );

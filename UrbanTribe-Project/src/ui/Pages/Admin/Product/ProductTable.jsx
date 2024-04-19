@@ -120,7 +120,7 @@ export default function ProductTable({ isRefresh, refetch }) {
                 <TableCell>
                   <div className="flex gap-3 [&>p]:cursor-pointer">
                     <p className="underline text-green-500">Preview</p>
-                  <p onClick={() => updateHandler()}
+                  <p onClick={() => updateHandler(product)}
                       className="underline text-blue-800 ">Edit </p>
                     <p
                       onClick={() => deleteHandler(product?._id)}
